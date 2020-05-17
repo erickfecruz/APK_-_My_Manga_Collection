@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?><manifest xmlns:android="http://schemas.android.com/apk/res/android"
+package="com.cruz.erick.mymangacollection">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+
+
+<application android:allowBackup="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name"
+    android:supportsRtl="true" android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+    android:name="android.support.multidex.MultiDexApplication">
+
+    <meta-data android:name="com.google.android.geo.API_KEY"
+        android:value="@string/google_maps_key" />
+
+    <activity android:name="com.cruz.erick.mymangacollection.MapsActivity" android:label="@string/title_activity_maps"/>
+
+    <activity android:name=".LogoActivity" android:configChanges="orientation"
+        android:screenOrientation="portrait">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+
+    <activity android:name=".TableActivity" android:configChanges="orientation"
+        android:screenOrientation="landscape" />
+
+    <activity android:name=".EditoraActivity.MainActivity" android:configChanges="orientation"
+        android:screenOrientation="landscape" />
+
+    <activity android:name=".InserirActivity" android:configChanges="orientation"
+        android:screenOrientation="portrait" />
+
+    <activity android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:name=".MenuActivity"
+        android:configChanges="orientation"
+        android:screenOrientation="portrait" />
+
+    <activity android:name=".WhoActivity" android:configChanges="orientation"
+        android:screenOrientation="portrait" />
+
+    <!-- Facebook -->
+    <activity android:name="com.facebook.FacebookActivity"
+        android:theme="@android:style/Theme.Translucent.NoTitleBar"
+        android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+        android:label="@string/app_name" />
+    <meta-data android:name="com.facebook.sdk.ApplicationName"
+        android:value="@string/app_name" />
+    <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id"/>
+
+    <provider android:authorities="com.facebook.app.FacebookContentProvider1755554168052796"
+        android:name="com.facebook.FacebookContentProvider"
+        android:exported="true"/>
+
+</application>
+
+</manifest>

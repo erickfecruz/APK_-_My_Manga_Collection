@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:orientation="horizontal">
+
+
+
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/aba_final"
+            android:id="@+id/menu">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="JBC"
+                android:id="@+id/btnFrag1"
+                android:onClick="ativaFragmento1"
+                android:textAlignment="center"
+
+                android:layout_marginTop="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="NEWPOP"
+                android:id="@+id/btnFrag2"
+                android:onClick="ativaFragmento2"
+                android:layout_below="@+id/btnFrag1"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="30dp"
+                android:layout_alignParentStart="true" />
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="PANINI"
+                android:id="@+id/btnFrag3"
+                android:layout_marginTop="30dp"
+                android:onClick="ativaFragmento3"
+                android:layout_below="@+id/btnFrag2"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="NOVA SAMPA"
+                android:id="@+id/btnFrag4"
+                android:onClick="ativaFragmento4"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/btnFrag3"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Editora Selecionada:"
+                android:id="@+id/textView"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textColorHighlight="@color/abc_secondary_text_material_dark"
+                android:textAlignment="center"
+                android:textColorHint="@color/abc_primary_text_material_dark"
+                android:textStyle="normal|bold"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/btnFrag4"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:gravity="center" />
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="bottom"
+                android:id="@+id/logo"
+                android:layout_below="@+id/textView"
+                android:layout_marginTop="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="85"
+            android:background="#BABACA"
+            android:orientation="vertical"
+            android:id="@+id/conteudo">
+        </LinearLayout>
+
+
+
+    </LinearLayout>

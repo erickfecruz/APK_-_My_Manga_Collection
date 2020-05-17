@@ -1,0 +1,3373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/layoutMaster"
+    android:background="@drawable/background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15"
+        android:id="@+id/cabecalho"
+        android:weightSum="1"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/nomeTabela1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_span="50"
+            android:gravity="center"
+            android:text="@string/tab_name"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textColorHighlight="@color/abc_secondary_text_material_dark"
+            android:textAlignment="center"
+            android:textColorHint="@color/abc_primary_text_material_dark"
+            android:textSize="33dp"
+            android:textStyle="normal|bold"
+            android:layout_gravity="center" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/labelTabela"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/botaoTab"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_weight="50"
+            android:layout_span="50"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/titTab"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_weight="50"
+            android:layout_span="50"
+            android:text="@string/titulo"
+            android:layout_toRightOf="@+id/botaoTab"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/autTab"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_weight="50"
+            android:layout_span="50"
+            android:text="@string/autor"
+            android:layout_toRightOf="@+id/titTab"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/ediTab"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_weight="50"
+            android:layout_span="50"
+            android:text="@string/editora"
+            android:layout_toRightOf="@+id/autTab"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            android:gravity="center" />
+
+
+        <TextView
+            android:id="@+id/nTotalTab"
+            android:layout_width="230dp"
+            android:layout_height="40dp"
+            android:layout_weight="50"
+            android:layout_span="50"
+            android:text="@string/nVolumes"
+            android:layout_toRightOf="@+id/ediTab"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/meusVolTab"
+            android:layout_width="230dp"
+            android:layout_height="40dp"
+            android:layout_weight="50"
+            android:layout_span="50"
+            android:text="@string/volComp"
+            android:layout_toRightOf="@+id/nTotalTab"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            android:gravity="center" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="59">
+
+        <RelativeLayout
+            android:id="@+id/layoutTabela"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+            <RelativeLayout
+                android:id="@+id/manga1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:visibility="visible">
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:background="@drawable/btnx"
+                    android:id="@+id/btn1"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    android:onClick="botaoRem1" />
+
+
+                <TextView
+                    android:id="@+id/titManga1"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btn1"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/autManga1"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/titManga1"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/ediManga1"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/autManga1"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+
+                <TextView
+                    android:id="@+id/nTot1"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/ediManga1"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/nTot1"
+                    android:background="@drawable/minus"
+                    android:id="@+id/btnMenos1"
+                    android:onClick="botaoMenos1"/>
+
+                <TextView
+                    android:id="@+id/meusVol1"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btnMenos1"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/meusVol1"
+                    android:background="@drawable/plus"
+                    android:id="@+id/btnMais1"
+                    android:onClick="botaoMais1" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/manga2"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/manga1"
+                android:layout_height="40dp"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:background="@drawable/btnx"
+                    android:id="@+id/btn2"
+                    android:onClick="botaoRem2"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    />
+
+
+                <TextView
+                    android:id="@+id/titManga2"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btn2"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/autManga2"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/titManga2"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/ediManga2"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/autManga2"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+
+                <TextView
+                    android:id="@+id/nTot2"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/ediManga2"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/nTot2"
+                    android:background="@drawable/minus"
+                    android:id="@+id/btnMenos2"
+                    android:onClick="botaoMenos2"/>
+
+                <TextView
+                    android:id="@+id/meusVol2"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btnMenos2"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/meusVol2"
+                    android:background="@drawable/plus"
+                    android:id="@+id/btnMais2"
+                    android:onClick="botaoMais2"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/manga3"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/manga2"
+                android:layout_height="40dp"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:background="@drawable/btnx"
+                    android:id="@+id/btn3"
+                    android:onClick="botaoRem3"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    />
+
+
+                <TextView
+                    android:id="@+id/titManga3"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btn3"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/autManga3"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/titManga3"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/ediManga3"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/autManga3"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+
+                <TextView
+                    android:id="@+id/nTot3"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/ediManga3"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/nTot3"
+                    android:background="@drawable/minus"
+                    android:id="@+id/btnMenos3"
+                    android:onClick="botaoMenos3"/>
+
+                <TextView
+                    android:id="@+id/meusVol3"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btnMenos3"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/meusVol3"
+                    android:background="@drawable/plus"
+                    android:id="@+id/btnMais3"
+                    android:onClick="botaoMais3"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/manga4"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/manga3"
+                android:layout_height="40dp"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:background="@drawable/btnx"
+                    android:id="@+id/btn4"
+                    android:onClick="botaoRem4"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    />
+
+
+                <TextView
+                    android:id="@+id/titManga4"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btn4"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/autManga4"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/titManga4"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/ediManga4"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/autManga4"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+
+                <TextView
+                    android:id="@+id/nTot4"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/ediManga4"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/nTot4"
+                    android:background="@drawable/minus"
+                    android:id="@+id/btnMenos4"
+                    android:onClick="botaoMenos4"/>
+
+                <TextView
+                    android:id="@+id/meusVol4"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btnMenos4"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/meusVol4"
+                    android:background="@drawable/plus"
+                    android:id="@+id/btnMais4"
+                    android:onClick="botaoMais4"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/manga5"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/manga4"
+                android:layout_height="40dp"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:background="@drawable/btnx"
+                    android:id="@+id/btn5"
+                    android:onClick="botaoRem5"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    />
+
+
+                <TextView
+                    android:id="@+id/titManga5"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btn5"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/autManga5"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/titManga5"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/ediManga5"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/autManga5"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+
+                <TextView
+                    android:id="@+id/nTot5"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/ediManga5"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/nTot5"
+                    android:background="@drawable/minus"
+                    android:id="@+id/btnMenos5"
+                    android:onClick="botaoMenos5"/>
+
+                <TextView
+                    android:id="@+id/meusVol5"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btnMenos5"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/meusVol5"
+                    android:background="@drawable/plus"
+                    android:id="@+id/btnMais5"
+                    android:onClick="botaoMais5"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/manga6"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/manga5"
+                android:layout_height="40dp"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:background="@drawable/btnx"
+                    android:id="@+id/btn6"
+                    android:onClick="botaoRem6"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    />
+
+
+                <TextView
+                    android:id="@+id/titManga6"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btn6"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/autManga6"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/titManga6"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/ediManga6"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/autManga6"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+
+                <TextView
+                    android:id="@+id/nTot6"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/ediManga6"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/nTot6"
+                    android:background="@drawable/minus"
+                    android:id="@+id/btnMenos6"
+                    android:onClick="botaoMenos6"/>
+
+                <TextView
+                    android:id="@+id/meusVol6"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btnMenos6"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/meusVol6"
+                    android:background="@drawable/plus"
+                    android:id="@+id/btnMais6"
+                    android:onClick="botaoMais6"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/manga7"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/manga6"
+                android:layout_height="40dp"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:background="@drawable/btnx"
+                    android:id="@+id/btn7"
+                    android:onClick="botaoRem7"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    />
+
+
+                <TextView
+                    android:id="@+id/titManga7"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btn7"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/autManga7"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/titManga7"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/ediManga7"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/autManga7"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+
+                <TextView
+                    android:id="@+id/nTot7"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/ediManga7"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/nTot7"
+                    android:background="@drawable/minus"
+                    android:id="@+id/btnMenos7"
+                    android:onClick="botaoMenos7"/>
+
+                <TextView
+                    android:id="@+id/meusVol7"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btnMenos7"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/meusVol7"
+                    android:background="@drawable/plus"
+                    android:id="@+id/btnMais7"
+                    android:onClick="botaoMais7"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/manga8"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/manga7"
+                android:layout_height="40dp"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:background="@drawable/btnx"
+                    android:id="@+id/btn8"
+                    android:onClick="botaoRem8"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    />
+
+
+                <TextView
+                    android:id="@+id/titManga8"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btn8"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/autManga8"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/titManga8"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/ediManga8"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/autManga8"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+
+                <TextView
+                    android:id="@+id/nTot8"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/ediManga8"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/nTot8"
+                    android:background="@drawable/minus"
+                    android:id="@+id/btnMenos8"
+                    android:onClick="botaoMenos8"/>
+
+                <TextView
+                    android:id="@+id/meusVol8"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btnMenos8"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/meusVol8"
+                    android:background="@drawable/plus"
+                    android:id="@+id/btnMais8"
+                    android:onClick="botaoMais8"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/manga9"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/manga8"
+                android:layout_height="40dp"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:background="@drawable/btnx"
+                    android:id="@+id/btn9"
+                    android:onClick="botaoRem9"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    />
+
+
+                <TextView
+                    android:id="@+id/titManga9"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btn9"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/autManga9"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/titManga9"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/ediManga9"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/autManga9"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+
+                <TextView
+                    android:id="@+id/nTot9"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/ediManga9"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/nTot9"
+                    android:background="@drawable/minus"
+                    android:id="@+id/btnMenos9"
+                    android:onClick="botaoMenos9"/>
+
+                <TextView
+                    android:id="@+id/meusVol9"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btnMenos9"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/meusVol9"
+                    android:background="@drawable/plus"
+                    android:id="@+id/btnMais9"
+                    android:onClick="botaoMais9"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/manga10"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/manga9"
+                android:layout_height="40dp"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:background="@drawable/btnx"
+                    android:id="@+id/btn10"
+                    android:onClick="botaoRem10"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    />
+
+
+                <TextView
+                    android:id="@+id/titManga10"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btn10"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/autManga10"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/titManga10"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/ediManga10"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/autManga10"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+
+                <TextView
+                    android:id="@+id/nTot10"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/ediManga10"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/nTot10"
+                    android:background="@drawable/minus"
+                    android:id="@+id/btnMenos10"
+                    android:onClick="botaoMenos10"/>
+
+                <TextView
+                    android:id="@+id/meusVol10"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btnMenos10"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/meusVol10"
+                    android:background="@drawable/plus"
+                    android:id="@+id/btnMais10"
+                    android:onClick="botaoMais10"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/manga11"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/manga10"
+                android:layout_height="40dp"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:background="@drawable/btnx"
+                    android:id="@+id/btn11"
+                    android:onClick="botaoRem11"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    />
+
+
+                <TextView
+                    android:id="@+id/titManga11"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btn11"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/autManga11"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/titManga11"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/ediManga11"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/autManga11"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+
+                <TextView
+                    android:id="@+id/nTot11"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/ediManga11"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/nTot11"
+                    android:background="@drawable/minus"
+                    android:id="@+id/btnMenos11"
+                    android:onClick="botaoMenos11"/>
+
+                <TextView
+                    android:id="@+id/meusVol11"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btnMenos11"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/meusVol11"
+                    android:background="@drawable/plus"
+                    android:id="@+id/btnMais11"
+                    android:onClick="botaoMais11"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/manga12"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/manga11"
+                android:layout_height="40dp"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:background="@drawable/btnx"
+                    android:id="@+id/btn12"
+                    android:onClick="botaoRem12"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    />
+
+
+                <TextView
+                    android:id="@+id/titManga12"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btn12"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/autManga12"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/titManga12"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/ediManga12"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/autManga12"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+
+                <TextView
+                    android:id="@+id/nTot12"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/ediManga12"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/nTot12"
+                    android:background="@drawable/minus"
+                    android:id="@+id/btnMenos12"
+                    android:onClick="botaoMenos12"/>
+
+                <TextView
+                    android:id="@+id/meusVol12"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btnMenos12"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/meusVol12"
+                    android:background="@drawable/plus"
+                    android:id="@+id/btnMais12"
+                    android:onClick="botaoMais12"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/manga13"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/manga12"
+                android:layout_height="40dp"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:background="@drawable/btnx"
+                    android:id="@+id/btn13"
+                    android:onClick="botaoRem13"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    />
+
+
+                <TextView
+                    android:id="@+id/titManga13"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btn13"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/autManga13"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/titManga13"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/ediManga13"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/autManga13"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+
+                <TextView
+                    android:id="@+id/nTot13"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/ediManga13"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/nTot13"
+                    android:background="@drawable/minus"
+                    android:id="@+id/btnMenos13"
+                    android:onClick="botaoMenos13"/>
+
+                <TextView
+                    android:id="@+id/meusVol13"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btnMenos13"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/meusVol13"
+                    android:background="@drawable/plus"
+                    android:id="@+id/btnMais13"
+                    android:onClick="botaoMais13"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/manga14"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/manga13"
+                android:layout_height="40dp"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:background="@drawable/btnx"
+                    android:id="@+id/btn14"
+                    android:onClick="botaoRem14"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    />
+
+
+                <TextView
+                    android:id="@+id/titManga14"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btn14"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/autManga14"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/titManga14"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/ediManga14"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/autManga14"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+
+                <TextView
+                    android:id="@+id/nTot14"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/ediManga14"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/nTot14"
+                    android:background="@drawable/minus"
+                    android:id="@+id/btnMenos14"
+                    android:onClick="botaoMenos14"/>
+
+                <TextView
+                    android:id="@+id/meusVol14"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btnMenos14"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/meusVol14"
+                    android:background="@drawable/plus"
+                    android:id="@+id/btnMais14"
+                    android:onClick="botaoMais14"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/manga15"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/manga14"
+                android:layout_height="40dp"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:background="@drawable/btnx"
+                    android:id="@+id/btn15"
+                    android:onClick="botaoRem15"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    />
+
+
+                <TextView
+                    android:id="@+id/titManga15"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btn15"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/autManga15"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/titManga15"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/ediManga15"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/autManga15"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+
+                <TextView
+                    android:id="@+id/nTot15"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/ediManga15"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/nTot15"
+                    android:background="@drawable/minus"
+                    android:id="@+id/btnMenos15"
+                    android:onClick="botaoMenos15"/>
+
+                <TextView
+                    android:id="@+id/meusVol15"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btnMenos15"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/meusVol15"
+                    android:background="@drawable/plus"
+                    android:id="@+id/btnMais15"
+                    android:onClick="botaoMais15"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/manga16"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/manga15"
+                android:layout_height="40dp"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:background="@drawable/btnx"
+                    android:id="@+id/btn16"
+                    android:onClick="botaoRem16"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    />
+
+
+                <TextView
+                    android:id="@+id/titManga16"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btn16"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/autManga16"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/titManga16"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/ediManga16"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/autManga16"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+
+                <TextView
+                    android:id="@+id/nTot16"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/ediManga16"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/nTot16"
+                    android:background="@drawable/minus"
+                    android:id="@+id/btnMenos16"
+                    android:onClick="botaoMenos16"/>
+
+                <TextView
+                    android:id="@+id/meusVol16"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btnMenos16"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/meusVol16"
+                    android:background="@drawable/plus"
+                    android:id="@+id/btnMais16"
+                    android:onClick="botaoMais16"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/manga17"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/manga16"
+                android:layout_height="40dp"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:background="@drawable/btnx"
+                    android:id="@+id/btn17"
+                    android:onClick="botaoRem17"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    />
+
+
+                <TextView
+                    android:id="@+id/titManga17"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btn17"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/autManga17"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/titManga17"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/ediManga17"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/autManga17"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+
+                <TextView
+                    android:id="@+id/nTot17"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/ediManga17"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/nTot17"
+                    android:background="@drawable/minus"
+                    android:id="@+id/btnMenos17"
+                    android:onClick="botaoMenos17"/>
+
+                <TextView
+                    android:id="@+id/meusVol17"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btnMenos17"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/meusVol17"
+                    android:background="@drawable/plus"
+                    android:id="@+id/btnMais17"
+                    android:onClick="botaoMais17"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/manga18"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/manga17"
+                android:layout_height="40dp"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:background="@drawable/btnx"
+                    android:id="@+id/btn18"
+                    android:onClick="botaoRem18"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    />
+
+
+                <TextView
+                    android:id="@+id/titManga18"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btn18"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/autManga18"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/titManga18"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/ediManga18"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/autManga18"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+
+                <TextView
+                    android:id="@+id/nTot18"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/ediManga18"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/nTot18"
+                    android:background="@drawable/minus"
+                    android:id="@+id/btnMenos18"
+                    android:onClick="botaoMenos18"/>
+
+                <TextView
+                    android:id="@+id/meusVol18"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btnMenos18"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/meusVol18"
+                    android:background="@drawable/plus"
+                    android:id="@+id/btnMais18"
+                    android:onClick="botaoMais18"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/manga19"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/manga18"
+                android:layout_height="40dp"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:background="@drawable/btnx"
+                    android:id="@+id/btn19"
+                    android:onClick="botaoRem19"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    />
+
+
+                <TextView
+                    android:id="@+id/titManga19"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btn19"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/autManga19"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/titManga19"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/ediManga19"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/autManga19"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+
+                <TextView
+                    android:id="@+id/nTot19"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/ediManga19"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/nTot19"
+                    android:background="@drawable/minus"
+                    android:id="@+id/btnMenos19"
+                    android:onClick="botaoMenos19"/>
+
+                <TextView
+                    android:id="@+id/meusVol19"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btnMenos19"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/meusVol19"
+                    android:background="@drawable/plus"
+                    android:id="@+id/btnMais19"
+                    android:onClick="botaoMais19"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/manga20"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/manga19"
+                android:layout_height="40dp"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:background="@drawable/btnx"
+                    android:id="@+id/btn20"
+                    android:onClick="botaoRem20"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    />
+
+
+                <TextView
+                    android:id="@+id/titManga20"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btn20"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/autManga20"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/titManga20"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/ediManga20"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/autManga20"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+
+                <TextView
+                    android:id="@+id/nTot20"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/ediManga20"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/nTot20"
+                    android:background="@drawable/minus"
+                    android:id="@+id/btnMenos20"
+                    android:onClick="botaoMenos20"/>
+
+                <TextView
+                    android:id="@+id/meusVol20"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btnMenos20"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/meusVol20"
+                    android:background="@drawable/plus"
+                    android:id="@+id/btnMais20"
+                    android:onClick="botaoMais20"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/manga21"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/manga20"
+                android:layout_height="40dp"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:background="@drawable/btnx"
+                    android:id="@+id/btn21"
+                    android:onClick="botaoRem21"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    />
+
+
+                <TextView
+                    android:id="@+id/titManga21"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btn21"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/autManga21"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/titManga21"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/ediManga21"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/autManga21"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+
+                <TextView
+                    android:id="@+id/nTot21"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/ediManga21"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/nTot21"
+                    android:background="@drawable/minus"
+                    android:id="@+id/btnMenos21"
+                    android:onClick="botaoMenos21"/>
+
+                <TextView
+                    android:id="@+id/meusVol21"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btnMenos21"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/meusVol21"
+                    android:background="@drawable/plus"
+                    android:id="@+id/btnMais21"
+                    android:onClick="botaoMais21"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/manga22"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/manga21"
+                android:layout_height="40dp"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:background="@drawable/btnx"
+                    android:id="@+id/btn22"
+                    android:onClick="botaoRem22"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    />
+
+
+                <TextView
+                    android:id="@+id/titManga22"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btn22"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/autManga22"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/titManga22"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/ediManga22"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/autManga22"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+
+                <TextView
+                    android:id="@+id/nTot22"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/ediManga22"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/nTot22"
+                    android:background="@drawable/minus"
+                    android:id="@+id/btnMenos22"
+                    android:onClick="botaoMenos22"/>
+
+                <TextView
+                    android:id="@+id/meusVol22"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btnMenos22"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/meusVol22"
+                    android:background="@drawable/plus"
+                    android:id="@+id/btnMais22"
+                    android:onClick="botaoMais22"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/manga23"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/manga22"
+                android:layout_height="40dp"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:background="@drawable/btnx"
+                    android:id="@+id/btn23"
+                    android:onClick="botaoRem23"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    />
+
+
+                <TextView
+                    android:id="@+id/titManga23"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btn23"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/autManga23"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/titManga23"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/ediManga23"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/autManga23"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+
+                <TextView
+                    android:id="@+id/nTot23"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/ediManga23"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/nTot23"
+                    android:background="@drawable/minus"
+                    android:id="@+id/btnMenos23"
+                    android:onClick="botaoMenos23"/>
+
+                <TextView
+                    android:id="@+id/meusVol23"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btnMenos23"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/meusVol23"
+                    android:background="@drawable/plus"
+                    android:id="@+id/btnMais23"
+                    android:onClick="botaoMais23"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/manga24"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/manga23"
+                android:layout_height="40dp"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:background="@drawable/btnx"
+                    android:id="@+id/btn24"
+                    android:onClick="botaoRem24"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    />
+
+
+                <TextView
+                    android:id="@+id/titManga24"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btn24"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/autManga24"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/titManga24"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/ediManga24"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/autManga24"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+
+                <TextView
+                    android:id="@+id/nTot24"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/ediManga24"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/nTot24"
+                    android:background="@drawable/minus"
+                    android:id="@+id/btnMenos24"
+                    android:onClick="botaoMenos24"/>
+
+                <TextView
+                    android:id="@+id/meusVol24"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btnMenos24"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/meusVol24"
+                    android:background="@drawable/plus"
+                    android:id="@+id/btnMais24"
+                    android:onClick="botaoMais24"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/manga25"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/manga24"
+                android:layout_height="40dp"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:background="@drawable/btnx"
+                    android:id="@+id/btn25"
+                    android:onClick="botaoRem25"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    />
+
+
+                <TextView
+                    android:id="@+id/titManga25"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btn25"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/autManga25"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/titManga25"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/ediManga25"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/autManga25"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+
+                <TextView
+                    android:id="@+id/nTot25"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/ediManga25"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/nTot25"
+                    android:background="@drawable/minus"
+                    android:id="@+id/btnMenos25"
+                    android:onClick="botaoMenos25"/>
+
+                <TextView
+                    android:id="@+id/meusVol25"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btnMenos25"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/meusVol25"
+                    android:background="@drawable/plus"
+                    android:id="@+id/btnMais25"
+                    android:onClick="botaoMais25"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/manga26"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/manga25"
+                android:layout_height="40dp"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:background="@drawable/btnx"
+                    android:id="@+id/btn26"
+                    android:onClick="botaoRem26"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    />
+
+
+                <TextView
+                    android:id="@+id/titManga26"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btn26"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/autManga26"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/titManga26"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/ediManga26"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/autManga26"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+
+                <TextView
+                    android:id="@+id/nTot26"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/ediManga26"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/nTot26"
+                    android:background="@drawable/minus"
+                    android:id="@+id/btnMenos26"
+                    android:onClick="botaoMenos26"/>
+
+                <TextView
+                    android:id="@+id/meusVol26"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btnMenos26"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/meusVol26"
+                    android:background="@drawable/plus"
+                    android:id="@+id/btnMais26"
+                    android:onClick="botaoMais26"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/manga27"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/manga26"
+                android:layout_height="40dp"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:background="@drawable/btnx"
+                    android:id="@+id/btn27"
+                    android:onClick="botaoRem27"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    />
+
+
+                <TextView
+                    android:id="@+id/titManga27"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btn27"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/autManga27"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/titManga27"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/ediManga27"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/autManga27"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+
+                <TextView
+                    android:id="@+id/nTot27"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/ediManga27"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/nTot27"
+                    android:background="@drawable/minus"
+                    android:id="@+id/btnMenos27"
+                    android:onClick="botaoMenos27"/>
+
+                <TextView
+                    android:id="@+id/meusVol27"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btnMenos27"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/meusVol27"
+                    android:background="@drawable/plus"
+                    android:id="@+id/btnMais27"
+                    android:onClick="botaoMais27"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/manga28"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/manga27"
+                android:layout_height="40dp"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:background="@drawable/btnx"
+                    android:id="@+id/btn28"
+                    android:onClick="botaoRem28"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    />
+
+
+                <TextView
+                    android:id="@+id/titManga28"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btn28"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/autManga28"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/titManga28"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/ediManga28"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/autManga28"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+
+                <TextView
+                    android:id="@+id/nTot28"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/ediManga28"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/nTot28"
+                    android:background="@drawable/minus"
+                    android:id="@+id/btnMenos28"
+                    android:onClick="botaoMenos28"/>
+
+                <TextView
+                    android:id="@+id/meusVol28"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btnMenos28"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/meusVol28"
+                    android:background="@drawable/plus"
+                    android:id="@+id/btnMais28"
+                    android:onClick="botaoMais28"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/manga29"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/manga28"
+                android:layout_height="40dp"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:background="@drawable/btnx"
+                    android:id="@+id/btn29"
+                    android:onClick="botaoRem29"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    />
+
+
+                <TextView
+                    android:id="@+id/titManga29"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btn29"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/autManga29"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/titManga29"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/ediManga29"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/autManga29"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+
+                <TextView
+                    android:id="@+id/nTot29"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/ediManga29"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/nTot29"
+                    android:background="@drawable/minus"
+                    android:id="@+id/btnMenos29"
+                    android:onClick="botaoMenos29"/>
+
+                <TextView
+                    android:id="@+id/meusVol29"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btnMenos29"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/meusVol29"
+                    android:background="@drawable/plus"
+                    android:id="@+id/btnMais29"
+                    android:onClick="botaoMais29"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/manga30"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/manga29"
+                android:layout_height="40dp"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:background="@drawable/btnx"
+                    android:id="@+id/btn30"
+                    android:onClick="botaoRem30"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    />
+
+
+                <TextView
+                    android:id="@+id/titManga30"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btn30"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/autManga30"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/titManga30"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/ediManga30"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/autManga30"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:gravity="center" />
+
+
+                <TextView
+                    android:id="@+id/nTot30"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/ediManga30"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/nTot30"
+                    android:background="@drawable/minus"
+                    android:id="@+id/btnMenos30"
+                    android:onClick="botaoMenos30"/>
+
+                <TextView
+                    android:id="@+id/meusVol30"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:layout_toRightOf="@+id/btnMenos30"
+                    android:textSize="18dp"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:layout_span="50"
+                    android:textSize="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/meusVol30"
+                    android:background="@drawable/plus"
+                    android:id="@+id/btnMais30"
+                    android:onClick="botaoMais30"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="18"
+
+        android:id="@+id/tela1Rodape"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Powered By"
+            android:id="@+id/poweredby"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Erick Fernandes da Cruz"
+            android:id="@+id/erickC"
+            android:layout_below="@+id/poweredby"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Fernanda Yamada"
+            android:id="@+id/fernanda"
+            android:layout_below="@+id/erickC"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+
+</LinearLayout>
+
+

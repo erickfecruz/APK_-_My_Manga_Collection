@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">My Manga Collection</string>
+    <string name="tab_name">Meus Mangás</string>
+    <string name="ins_name">Inserir Mangá</string>
+    <string name="quem_name">Sobre</string>
+    <string name="pesq_geral">Pesquisar</string>
+    <string name="pesq_titulo">Pesquisar Título</string>
+    <string name="pesq_autor">Pesquisar Autor</string>
+    <string name="pesq_editora">Pesquisar Editora</string>
+    <string name="add_button">Database</string>
+    <string name="titulo">Título</string>
+    <string name="autor">Autor</string>
+    <string name="editora">Editora</string>
+    <string name="titulo2">Título:</string>
+    <string name="autor2">Autor:</string>
+    <string name="editora2">Editora:</string>
+    <string name="nVolumes">Número de Volumes</string>
+    <string name="volComp">Volumes Comprados</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="what_manga">O que é Mangá?</string>
+    <string name="desenvolvedores">Sobre os Desenvolvedores</string>
+    <string name="what_manga2">My Manga Collection</string>
+    <string name="who_manga1">Mangás são histórias em quadrinhos japônesas que surgiram no Japão por volta do século XVII. Dentre as características mais marcantes que podemos encontrar nesse tipo de história, temos o fato de todos os desenhos serem em preto e branco e que o estilo de leitura é oriental (da direita pra esquerda). Outra caracteristica que essas histórias possuem é a de histórias longas que podem chegar a um grande número de volumes (Naruto por exemplo apresenta 72 volumes).</string>
+    <string name="who_manga2">Atualmente os mangás foram difundidos por todo o planeta, e a partir deles se originaram filmes, Animes (Animação japonesa), brinquedos e diversos produtos dos mais variados. Alguns desenhos que ficaram muito conhecidos que foram baseados em mangás foram Dragon Ball, Cavaleiros do Zodiaco, Shurato, Pokemon, dentre muitos outros. Além disso, o mercado de venda de mangás no Brasil cresce a cada ano, e hoje as editoras brasileira possuem um grande acervo de títulos para os fãs que adimiram essas histórias aqui no Brasil.</string>
+    <string name="who_manga3">Apesar do grande crescimento do mercado brasileiro de mangás, os fãs muitas vezes tem dificuldade de organizar suas coleções, optando por criar tabelas no excell ou até mesmo a buscar aplicativos estrangeiros que não possuem as informações sobre o mercado nacional.</string>
+    <string name="who_manga4">Para solucionar este problema o My Manga Collection foi criado. O My Manga Collection apresenta um ambiente para colecionadores de mangás brasileiros possam organizar suas coleções de forma rápida e fácil, além de encontrar locais onde possam encontrar mangás nas proximidades e ter mais informações sobre as editoras que publicam este manga no Brasil.</string>
+    <string name="who_dev1">Meu primeiro contato com animações japônesas foi Cavaleiros do Zodiaco, porém passei a acompanhar esse mundo mais afundo em 2005 quando comecei a assistir Naruto pela internet. Meu anime preferido atualmente é ToraDora e dos mangás que coleciono, minha coleção favorita é Fullmetal Alchemist.</string>
+    <string name="who_dev2">Desde muito pequena tenho contato com animes e com a cultura japonesa. Porém, meu interesse começou a crescer por volta dos meus sete anos, que foi a época em que conheci meu anime favorito, que é Dragon Ball. Um dos aspectos que eu mais admiro nos animes é a parte gráfica, isso porque gosto muito de desenhar e recriar meus personagens favoritos no papel. Além disso, sou fã de carteirinha de dublagem japonesa e os animes me possibilitam acompanhar meus dubladores favoritos.</string>
+    <string name="app_id">1755554168052796</string>
+</resources>
